@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+  <link rel="icon" href="devchallenges.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/responsive.css" media="(max-width: 936px)">
+  <title>Devchallenges</title>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="header">
+      <div class="logo"></div>
+
+      <nav>
+
+
+        <section class="container-filters">
+          <section class="filter">
+            <div class="filters">
+              <div class="location" id=" location">
+
+                <div class="city-country-2 click">
+                  <p>location <span class="error active">*select an option*</span></p>
+                  <p class="value-filter-city-country" id="value-filter-country-city">Add Location</p>
+                </div>
+
+                <section class="section-city-country" id="section-city-country">
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="filter-country-city" id="1">Helsinki, Finland</p>
+                  </div>
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="filter-country-city" id="2">Turku, Finland</p>
+                  </div>
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="filter-country-city" id="3">Oulu, Finland</p>
+                  </div>
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="filter-country-city" id="4">Vaasa, Finland</p>
+                  </div>
+
+
+                </section>
+
+              </div>
+              <div class="line"></div>
+              <div class="guest" id="guest">
+                <div class="guest-2 click">
+                  <p>guests</p>
+                  <p class="filter-guest" id="filter-guest">Add <span>guest</span></p>
+                </div>
+                <section class="section-guest" id="section-guest">
+                  <div class="adults">
+                    <p>Adults</p>
+                    <p>Ages 13 or above</p>
+                    <div class="counting">
+                      <div class="plus" id="adults-plus"><i class="fas fa-plus"></i></div>
+                      <span class="result" id="adults-result">0</span>
+                      <div class="minus" id="adults-minus"><i class="fas fa-minus"></i></div>
+                    </div>
+                  </div>
+                  <div class="children">
+                    <p>Children</p>
+                    <p>Ages 2-12</p>
+                    <div class="counting">
+                      <div class="plus" id="children-plus"><i class="fas fa-plus"></i></div>
+                      <span class="result" id="children-result">0</span>
+                      <div class="minus" id="children-minus"><i class="fas fa-minus"></i></div>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+              <div class="line"></div>
+              <div class="search" id="search">
+                <div>
+                  <i class="fas fa-search"></i>
+                  <p>Search</p>
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </section>
+        </section>
+
+
+
+
+
+
+
+        <div class="search-bar">
+
+          <div class="city-country-1 click">
+            <p>Add Location</p>
+          </div>
+
+          <div class="guest-1 click">
+            <p class="number-guest"> Add guest</p>
+          </div>
+          <span class="cont-search"><i class="fas fa-search"></i></span>
+        </div>
+
+      </nav>
+
+
+    </header>
+
+    <main>
+      <section class="apartaments">
+        <div class="sub-title">
+          <h2>Stays in Finland</h2>
+          <p id="number-stays">+12 stays</p>
+        </div>
+
+        <section id="stays">
+          <div class="no-stays">
+            <p>sorry, there are no stays.</p>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+  </div>
+  <script src="js/index.js"></script>
+  <script src="https://kit.fontawesome.com/a35662e283.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

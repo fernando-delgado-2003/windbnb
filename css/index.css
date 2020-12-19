@@ -1,0 +1,329 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 92%;
+    margin: 30px auto 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+    width: 96px;
+    height: 16px;
+    background-image: url("../logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header .search-bar{
+    width: 20%;
+    min-width: 330px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+/*
+    LA CLASE "city-country-1" ES PARA LA SECCION DE "add location" QUE ESTA EN LA BARRA DE BUSQUEDA QUE APARECE AL CARGAR LA PAGINA Y  LA CLASE "city-country-2" ES PARA LA SECCION DE "add location" QUE APARECE  AL OPRIMIR "country-city-1"
+    Y LO MISMO APLICA PARA "guest-1 y guest-2"
+*/
+.header .search-bar .city-country-1 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #F2F2F2;
+    cursor: pointer;
+}
+.header .search-bar .city-country-1 p {
+    font-size: 14px;
+    text-align: center;
+}
+.header .search-bar .guest-1{
+    width: 150px;
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header .search-bar .guest-1 p{
+    font-size: 15px;
+    color: #BDBDBD;
+
+}
+.header .search-bar .cont-search,
+.container-filters .filter .cont-search {
+    color: #EB5757;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.apartaments .sub-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0 20px 0;
+}
+
+/*
+    FILTROS
+*/
+.container-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(79, 79, 79 , 40%);
+    display: none;
+
+}
+.container-filters.active{
+    display: block;
+}
+.container-filters .filter {
+    width: 100%;
+    min-height: 370px;
+    background-color: #fff;
+}
+.container-filters .filter .filters {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
+.container-filters .filter .filters .location{
+    width: 42%;
+    margin: 2px;
+}
+
+.line{
+    border-right: 1px solid #F2F2F2;
+    margin: 0 1px;
+    height: 50px;
+}
+/*
+    BORDER EN EL FILTRO DE "LOCATION"
+*/
+.container-filters .filter .filters .location .city-country-2{
+    padding-left: 15px;
+}
+.container-filters .filter .filters .location .city-country-2 .error {
+    display: block;
+    color: #f42b2b;
+    font-size: 13px;
+    margin-left: auto;
+    float: right;
+    margin-right: 30px;
+    line-height: 25px;
+}
+.container-filters .filter .filters .location .city-country-2 .error.active{
+    display: none;
+}
+.container-filters .filter .filters .location .city-country-2.active{
+    border-radius: 20px;
+    border: 1px solid #333333;
+    cursor: pointer;
+    margin-right: 2px;
+
+}
+.container-filters .filter .filters .location section{
+    display: flex;
+    flex-direction: column;
+}
+.container-filters .filter .filters .location section.active{
+    display: none;
+}
+.container-filters .filter .filters .location section i{
+    margin-right: 10px;
+}
+.container-filters .filter .filters .location section > div {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin: 30px 0 10px 15px;
+    cursor: pointer;
+}
+
+/*guest 2*/
+
+.container-filters .filter .filters .guest{
+    width: 42%;
+margin: 2px;
+    
+}
+.container-filters .filter .filters .guest section.active{
+    display: none;
+}
+.guest .section-guest.active{
+    display: none;
+}
+.guest .section-city-country.active{
+    display: none;
+}
+.container-filters .filter .filters .guest .guest-2{
+    padding-left: 15px;
+}
+
+.container-filters .filter .filters .guest .guest-2.active{
+    border: 1px solid #333333;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.guest section .adults,
+.guest section .children {
+    margin: 30px 0 0 15px;
+}
+.guest section .adults p:nth-child(2),
+.guest section .children p:nth-child(2){
+    color: #BDBDBD;
+    margin: 1x 0 8px 0;
+}
+.guest section .adults .counting,
+.guest section .children .counting{
+    display: flex;
+}
+.guest section .adults .counting .plus,
+.guest section .children .counting .plus,
+.guest section .adults .counting .minus,
+.guest section .children .counting .minus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #828282;
+    border-radius: 5px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+.guest section .adults .counting .plus i,
+.guest section .children .counting .plus i,
+.guest section .adults .counting .minus i,
+.guest section .children .counting .minus i{
+    color: #828282;
+    font-size: 13px;
+}
+.guest section .adults .counting .result ,
+.guest section .children .counting .result{
+margin: 0 15px;
+}
+
+.container-filters .filter .filters .search{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    border-radius: 20px;
+    background: #EB5757;
+    color: #fff;
+    cursor: pointer;
+    min-width: 110px;
+
+}
+.container-filters .filter .filters .search div{
+        display: flex;
+    align-items: center;
+}
+.container-filters .filter .filters .search i{
+    margin-right: 10px;
+}
+#stays {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(360px, 1fr));
+    grid-auto-rows: minmax(330px, 1fr);
+    gap: 26px;
+}
+#stays.active {
+    grid-template-columns: auto;
+}
+.no-stays{
+    display: none;
+}
+.no-stays.active {
+    display: inline-block;
+    margin: auto;
+    font-size: 20px;
+}
+#stays .card{
+    border-radius: 16px;
+}
+
+#stays .card .img-stay{
+    width: 100%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 16px;
+}
+
+#stays .card .info-stay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+#stays .card .info-stay .super-host {
+    border: 1px solid #4F4F4F;
+    color: #4F4F4F;
+    height: 23px;
+    padding: 0 9px;
+    border-radius: 16px;
+    font-size: 15px;
+}
+#stays .card .info-stay .description{
+    font-size: 15px;
+}
+#stays .card .info-stay .type{
+    color: #828282;
+}
+#stays .card .info-stay .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+#stays .card .info-stay .rating .fas{
+    margin-right: 1px;
+    color: #EB5757;
+    
+}
+#stays .card .title{
+    margin-top: 18px;
+}
+#stays .card .title h2{
+    font-size: 16px;
+}
+
+@media (max-width: 3840px){
+    #stays {
+        grid-template-columns: repeat(3, minmax(360px, 1fr));
+        grid-auto-rows: minmax(460px, 1fr);
+ 
+    }
+}
+@media (max-width: 2000px){
+    #stays {
+        grid-auto-rows: minmax(400px, 1fr);
+    }
+}
+@media (max-width: 1236px){
+    #stays {
+        grid-template-columns: repeat(3, minmax(270px, 1fr));
+        grid-auto-rows: minmax(380px, 1fr);
+    }
+}
